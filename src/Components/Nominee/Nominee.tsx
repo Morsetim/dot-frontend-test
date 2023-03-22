@@ -15,7 +15,7 @@ const Nominee:React.FC<ItemProps> = ({item, handleNomineeSelection, categoryId, 
   return (
    <div className={`nominee-item ${isSelected && 'nominee-item-selected'} `}>
         <p className='nominee-title'>{item.title}</p>
-        <img alt="image" src={item.photoUrL}/>
+        <img alt="nominee" src={item.photoUrL}/>
         {isSelected ? <span>Selected</span> : <button onClick={() => handleNomineeSelection(categoryId, item)}>Select Button</button>}
          
     </div>
