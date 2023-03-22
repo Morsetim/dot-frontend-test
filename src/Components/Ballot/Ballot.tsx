@@ -32,12 +32,11 @@ const Ballot = () => {
    executeScroll()
   setOpen(true)
  }
-
   return (
     <div className='ballot'>
       <div>
-        {data.map((category) => (
-          <Category category={category} handleNomineeSelection={handleNomineeSelection} selectedNominee={selectedNominee} />
+        {data.map((category, index) => (
+          <Category key={index} category={category} handleNomineeSelection={handleNomineeSelection} selectedNominee={selectedNominee} />
         ))}
       </div>
       <div className="btn-wrapper">

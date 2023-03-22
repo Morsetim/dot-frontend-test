@@ -12,7 +12,7 @@ const ResultModal = ({open, setOpen}: Props) => {
     <>
     {open && <div className='result-modal'>
       <span onClick={()=> setOpen(false)} className='close-modal'>&times;</span>
-      <h2>Succes Modal</h2>
+      <h2 className='modal-text'>Succes Modal</h2>
     </div>}
     </>
   )

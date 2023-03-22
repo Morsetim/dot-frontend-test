@@ -19,9 +19,9 @@ const Category:React.FC<Props> = ({category, handleNomineeSelection, selectedNom
   return (
     <div className='main-cat'>
         <h2 className='category-heading'>{category.title}</h2>
-        <div className='categories'>{category.items.map((item)=> {
+        <div className='categories'>{category.items.map((item, index)=> {
             return(
-                <Nominee item={item} handleNomineeSelection={handleNomineeSelection} categoryId={category.id} selectedNominee={selectedNominee}/>
+                <Nominee key={index} item={item} handleNomineeSelection={handleNomineeSelection} categoryId={category.id} selectedNominee={selectedNominee}/>
             )
         })}
         </div>

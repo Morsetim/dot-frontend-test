@@ -1,5 +1,3 @@
-import React, { useState } from 'react';
-
 interface Item {
     title: string;
     id: string;
@@ -17,7 +15,7 @@ const Nominee:React.FC<ItemProps> = ({item, handleNomineeSelection, categoryId, 
   return (
    <div className={`nominee-item ${isSelected && 'nominee-item-selected'} `}>
         <p className='nominee-title'>{item.title}</p>
-        <img src={item.photoUrL}/>
+        <img alt="image" src={item.photoUrL}/>
         {isSelected ? <span>Selected</span> : <button onClick={() => handleNomineeSelection(categoryId, item)}>Select Button</button>}
          
     </div>
