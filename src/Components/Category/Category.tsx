@@ -1,4 +1,3 @@
-import React, { useState } from 'react'
 import Nominee from "../Nominee/Nominee";
 
 
@@ -14,7 +13,6 @@ interface Props {
 }
 
 const Category:React.FC<Props> = ({category, handleNomineeSelection, selectedNominee}) => {
- const [openModal, setOpenModal] = useState(false);
 
   return (
     <div className='main-cat'>
@@ -29,4 +27,4 @@ const Category:React.FC<Props> = ({category, handleNomineeSelection, selectedNom
   )
 }
 
-export default Category
+export default Category;

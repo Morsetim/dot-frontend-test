@@ -3,20 +3,25 @@
   margin: 0;
   box-sizing: border-box;
 }
-
-.ballot{
-  /* width: 57%; */
-  /* margin: auto; */
-  /* position: relative; */
-  padding: 100px 250px;
-  
+.app{
+ position: relative;
 }
+.ballot{
+  padding: 20px 250px 0px 250px;
+}
+.globe{
+  text-align: center;
+  width: 200px;
+  margin: auto;
+  margin-top: 0;
+  margin-bottom: 30px;
+}
+
 .main-cat{
   width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  /* align-items: center; */
 }
 .categories{
   display: flex;
@@ -29,7 +34,6 @@
   height: 40px;
   width: 100%;
   border: 1px solid;
-  
 }
 .nominee-item{
   width: 30% ;
@@ -48,6 +52,10 @@
 .nominee-item-selected{
   color: #d5e8d4;
   border-color: green;
+  background: #d5e8d4;
+}
+.selected-text{
+  color: #393a3c;
 }
 .nominee-item button{
   /* color:#f5f5f5; */
@@ -67,14 +75,15 @@ img{
   object-fit: cover;
 }
 .result-modal{
+  margin: 0;
   position: absolute;
-  bottom: 300px; 
+  top: 50%;
   left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
   width: 600px;
   height: 400px;
-  transform: translate(-50%, -50%);
   background: white;
-  position: relative;
 }
 .close-modal{
   font-size: 23px;
@@ -87,20 +96,64 @@ img{
 .btn-wrapper{
  display: flex;
  justify-content: flex-end;
+ padding-right: 250px;
+ /* padding-bottom: 100px; */
 }
 .submit{
-  
   height: 55px;
   width: 137px;
   padding: 10px 20px;
   border-radius: 8px;
- outline: none;
- color: black;
- font-weight: 700;
- background: rgb(144, 234, 154);
- border: none;
- cursor: pointer;
+  outline: none;
+  color: black;
+  font-weight: 700;
+  background: rgb(144, 234, 154);
+  border: none;
+  cursor: pointer;
 }
 .modal-text{
   text-align: center;
+}
+.overlay{
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, .7);
+  z-index: 1000;
+}
+
+@media screen and (max-width: 480px) {
+  .ballot{
+    width: 100%;
+    padding: 0;
+  }
+  .result-modal{
+    width: 88%;
+  }
+  .categories{
+    display: flex;
+    justify-content: center;
+  }
+  .nominee-title{
+    font-size: 12px;
+  }
+  img {
+    width: 83px;
+    height: 83px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+  .nominee-item button {
+    padding: 4px;
+  }
+  .category-heading {
+    text-align: center;
+  }
+  .btn-wrapper {
+    display: flex;
+    justify-content: center;
+    padding: 0;
+}
 }
